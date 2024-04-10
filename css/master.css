@@ -1,0 +1,236 @@
+body{
+  font-family: "Roboto","Arial",sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+/* start header  */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 10px 16px;
+  overflow: hidden;
+}
+header .left{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .left img{
+  width: 46%;
+  margin-left: 5px;
+}
+@media (max-width:767px) {
+  header .left img{
+    width: 46%;
+  }
+  header .left i{
+    display: none;
+  }
+}
+header .center{
+  display: flex;
+  align-items: center;
+  margin-left: -9%;
+}
+header .center form{
+  display: flex;
+  height: 40px;
+  width: 628px;
+}
+header .center form input {
+  margin-left: 70px;
+  width: 60%;
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  padding: 12px;
+  font-size: 1.6rem;
+  border: #d3d3d3 1px solid;
+} 
+@media (max-width:767px) {
+  header .center form{
+    width: 300px;
+  }
+}
+header .center form button{
+  border: #d3d3d3 1px solid;
+  width: 64px;
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -ms-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+}
+header .center form button:hover{
+  background-color: #c6c6c6;
+}
+header .center form .any{
+  margin-top: 8px;
+  margin-left: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+header .right i{
+  color: black;
+  cursor: pointer;
+  padding-left: 10px;
+}
+/* end header  */
+/* start side bar  */
+.content-area{
+  height: calc(100vh - 56px);
+  background-color: #f9f9f9;
+  display: flex;
+}
+ aside{
+  height: 100%;
+  width: 280px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+@media (max-width:1023px) {
+  aside{
+    width: 80px;
+  }
+  aside nav span{
+    display: none;
+  }
+  aside nav p{
+    display: none;
+  }
+}
+nav{
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 15px;
+}
+nav .nav-link{
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: black;
+}
+nav .nav-link:hover{
+  background-color: rgb(0, 0, 0, 0.05);
+}
+nav .nav-link span{
+  margin-left: 24px;
+  font-size: 1.4em;
+  line-height: 2em;
+  font-weight: 500;
+}
+nav hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+  margin: 10px 0;
+}
+nav p{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #606060;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+nav .channel-img{
+  width: 24px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* end side bar  */
+/* start main  */
+main{
+  width: 100%;
+  height: 100%;
+  padding: 35px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: auto;
+}
+main .container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+  .video {
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 330px;
+  }
+  .video .thumb{
+    width: 100%;
+    height: 190px;
+    margin-bottom: 16px;
+  }
+  .video .thumb img{
+    width: 100%;
+  }
+  .video .info{
+    display: flex;
+  }
+  .video .info img{
+    width: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 15px;
+}
+.video  .title {
+  display: flex;
+  flex-direction: column;
+}
+.video .title .video-title{
+  font-size: 1.6em;
+  color: rgb(3, 3, 3);
+  max-width: 278px;
+  font-weight: 500;
+  line-height: 2.2em;
+  margin-bottom: 1px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.video .creator, .video .title span{
+  color: rgb(96, 96, 96);
+  line-height: 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: block;
+}
+.video .creator:hover,
+  .creator span:hover{
+  color: black;
+}
+/* end main  */
